@@ -15,3 +15,15 @@ FROM
 ORDER BY 
 	lastname,
 	firstname
+
+--4 Modify query 3 so that the column headings are as follows: 'Last Name,' 'First Name,' 'Date of Hire,' and 'Home Phone Number.'
+select 
+	lastname as 'Last Name',
+	firstname as 'First Name',
+	hiredate as 'Date of Hire',
+	homephone as 'Home Phone Number'
+FROM
+	employees
+ORDER BY 
+	lastname,
+	firstname
