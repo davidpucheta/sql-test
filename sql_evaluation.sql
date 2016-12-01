@@ -63,3 +63,19 @@ where
 	and shipcity like 'S%'
 order by 
 	shipname asc 
+
+--8 Rewrite query 7 to remove the use of BETWEEN and IN, and replace with the equivalent use of =, , /= and AND and OR expressions.
+select 
+	orderid,
+	shipname,
+	orderdate,
+	freight
+from 
+	orders
+where 
+	freight >= 50 and freight <= 100
+	and shipcountry = 'Austria' or shipcountry = 'Brazil' or shipcountry ='France'
+	and shipcity like 'S%'
+order by 
+	shipname asc 
+
