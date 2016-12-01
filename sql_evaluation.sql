@@ -79,3 +79,11 @@ where
 order by 
 	shipname asc 
 
+--9 Select the Employee's First Name, concatenated to the Last name, separated by a space. Call the column 'Employee Name,' the length of this employee name Length, the location of the first 'a' in the name 'A Location,' and the 5–9 characters from the name 'Substring.' Order the results by the Employee Name using the alias	
+select 
+	firstname + ' ' + lastname as  'Employee Name,',
+	len (firstname + ' ' + lastname) as 'Length',
+	charindex('a', firstname + ' ' + lastname) as 'A Location,',
+	substring ( firstname + ' ' + lastname,5 , 9 ) as 'Substring'
+order by 
+	'Employee Name,'
