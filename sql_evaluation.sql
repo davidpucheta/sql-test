@@ -27,3 +27,15 @@ FROM
 ORDER BY 
 	lastname,
 	firstname
+
+--5 Display the product name and quantity per unit, units in stock, and unit price for all products that have a unit price greater than $50. Order the results by unit price in descending order.
+select 
+	productname,
+	quantityperunit,
+	unitsinstock, 
+	unitprice
+where 
+	unitprice > 50
+order by 
+	unitprice desc 
+
