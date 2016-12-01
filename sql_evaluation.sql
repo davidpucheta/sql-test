@@ -49,4 +49,17 @@ where
 order by 
 	name asc 
 
-
+--7 Display the Order Id, ShipName, Order Date, and Freight of all orders that have a freight >/= 50 and </= 100; a ship country of Austria, Brazil, or France; and a Ship City that starts with an 'S.' Use, BETWEEN, IN, and LIKE for the WHERE clause conditions. Order the results by ShipName in ascending order
+select 
+	orderid,
+	shipname,
+	orderdate,
+	freight
+from 
+	orders
+where 
+	freight between 50 and 100
+	and shipcountry in ('Austria', 'Brazil', 'France')
+	and shipcity like 'S%'
+order by 
+	shipname asc 
