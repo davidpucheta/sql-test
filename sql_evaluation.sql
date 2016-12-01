@@ -87,3 +87,16 @@ select
 	substring ( firstname + ' ' + lastname,5 , 9 ) as 'Substring'
 order by 
 	'Employee Name,'
+
+--10 For each customer, show the number of orders placed, and the largest, smallest and total freight ordered. Only show those customers who have placed more than 15 orders.
+select 
+	customerid,
+	count (customerid),
+	max (freight),
+	min(freight),
+	sum(count (customerid))
+from 
+	orders	
+where 
+	count (customerid) > 15
+
