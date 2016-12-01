@@ -39,3 +39,14 @@ where
 order by 
 	unitprice desc 
 
+--6 Display the Name of all U.S.-based suppliers. Order the results by Name in ascending order.
+select 
+	companyname
+from 
+	suppliers
+where 
+	country = 'USA'
+order by 
+	name asc 
+
+
